@@ -1,0 +1,50 @@
+<template>
+    <div class="container">
+    <!--my-navbar></my-navbar-->
+    <h1>Stationary Shop </h1>
+    <br><br>
+    <div class="shopitems">
+        <h2>Start Here</h2>
+        <div>
+            <template for:each={myItems} for:item="item" for:index="index">
+                <div key={item.name} onitemselect={handleItemSelect}>
+                    <my-items data-index={index}
+                        item-name={item.name}
+                        item-price={item.price}
+                        item-image={item.image}
+                    >
+                    </my-items>
+                </div>
+            </template>
+       </div>
+
+    </div>
+
+    <div class="shopcart">
+        <h2>My Cart</h2>
+        <br>
+        <button class="setmargin" onclick={sortName}>Sort Items</button>
+        <button class="setmargin" onclick={deleteSelectedItems}>Delete Selected Items</button>
+        <div>
+            <template for:each={myCart} for:item="cart" for:index="index">
+                <div key={cart.name} onitemdelete={handleItemDelete} onitemchecked={handleItemChecked}>
+                    <my-carts data-index={index}
+                        item-name={cart.name}
+                        item-price={cart.price}
+                        item-image={cart.image}
+                        item-quantity={cart.quantity}
+                        item-selected={cart.selected}
+                        item-total={cart.total}
+                    >
+                    </my-carts>
+                </div>
+            </template>
+        </div>
+        <br>
+        <div style="border-top: 1px solid #eee; background-color: #3398FF;">
+            <label>Cart Total: ${cartTotalPrice}</label>
+        </div>            
+    </div>
+
+    </div>
+</template>

@@ -1,0 +1,49 @@
+h1 {
+    margin: 1rem;
+}
+
+.container {
+    padding: 2rem;
+    text-align: center;
+    
+}
+
+.iteration-holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+
+.info {
+    padding: 1rem;
+}
+
+.info img {
+    height: 10rem;
+}
+
+.selitemdiv{
+	margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;	
+}
+
+.sel-items{
+    color: blue;
+    font-weight: bold;
+    width: 150px;
+    float: center;
+    text-align: right;
+    float:left;
+}
+
+.itemimg {
+    border: 1px solid #ddd; /* Gray border */
+    border-radius: 2px;  /* Rounded border */
+    padding: 2px; /* Some padding */
+    width: 50px; /* Set a small width */
+    height: 50px;
+    float: left
+  }

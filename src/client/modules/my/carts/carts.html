@@ -1,0 +1,9 @@
+<template>
+    <div class="selitemdiv">
+              
+        <!--img class="itemimg" src={itemImage} alt={itemName} /-->
+        <label class="item-text">{itemQuantity} {itemName}    ${itemTotal}</label>
+        <input type="checkbox" class="setmargin" onchange={handleItemCheck}></input>      
+        <button onclick={handleDelItem} class="setmargin">Delete Item</button>
+    </div>
+  </template>
